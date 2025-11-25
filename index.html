@@ -4,8 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HZT | Tailored Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div></div>
+  <body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Menu Options (Left) -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              >Portfolio</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              class="text-gray-700 hover:text-blue-600 focus:outline-none"
+              id="mobile-menu-btn"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Logo (Centered) -->
+          <div class="absolute left-1/2 transform -translate-x-1/2">
+            <a href="#" class="block">
+              <img src="./site-images/HZT_site_logo.png" alt="HZT logo" class="h-10 w-auto" />
+            </a>
+          </div>
+
+          <!-- CTA Button (Right) -->
+          <div class="hidden md:flex">
+            <button
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-medium transition"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <!-- Mobile CTA Button -->
+          <div class="md:hidden flex items-center ml-auto">
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium transition text-sm"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            >About</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            >Portfolio</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 class="text-4xl font-bold text-gray-900">Welcome to HZT</h1>
+      <p class="text-gray-600 mt-4">Tailored Digital Solutions</p>
+    </main>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
