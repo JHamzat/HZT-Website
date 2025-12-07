@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HZT | Tailored Digital Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
       /* Smooth scrolling for anchor links */
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
+      /* Hero title font + tighter letter-spacing */
+      .hero-title { font-family: 'Oswald', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; letter-spacing: -0.03em; }
     </style>
   </head>
   <body class="bg-white">
@@ -21,12 +24,12 @@
           <div class="hidden md:flex space-x-8">
             <a
               href="#"
-              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              class="text-gray-700 hover:text-[#f57227] font-medium transition"
               >Home</a
             >
             <a
-              href="#"
-              class="text-gray-700 hover:text-blue-600 font-medium transition"
+              href="portfolio.html"
+              class="text-gray-700 hover:text-[#f57227] font-medium transition"
               >Portfolio</a
             >
           
@@ -35,7 +38,7 @@
           <!-- Mobile Menu Button -->
           <div class="md:hidden flex items-center">
             <button
-              class="text-gray-700 hover:text-blue-600 focus:outline-none"
+              class="text-gray-700 hover:text-[#f57227] focus:outline-none"
               id="mobile-menu-btn"
             >
               <svg
@@ -68,7 +71,9 @@
           <!-- CTA Button (Right) -->
           <div class="hidden md:flex">
             <button
-              class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 font-medium transition"
+              type="button"
+              data-modal-open="contactModal"
+              class="bg-[#f57227] text-white px-6 py-2 rounded-lg hover:bg-[#e05910] font-medium transition"
             >
               Work With Us
             </button>
@@ -77,7 +82,9 @@
           <!-- Mobile CTA Button -->
           <div class="md:hidden flex items-center ml-auto">
             <button
-              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium transition text-sm"
+              type="button"
+              data-modal-open="contactModal"
+              class="bg-[#f57227] text-white px-4 py-2 rounded-lg hover:bg-[#e05910] font-medium transition text-sm"
             >
               Work With Us
             </button>
@@ -88,22 +95,22 @@
         <div id="mobile-menu" class="hidden md:hidden pb-4">
           <a
             href="#"
-            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
             >Home</a
           >
           <a
             href="#"
-            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
             >Services</a
           >
           <a
             href="#"
-            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
             >About</a
           >
           <a
-            href="#"
-            class="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+            href="portfolio.html"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
             >Portfolio</a
           >
         </div>
@@ -111,22 +118,30 @@
     </nav>
 
     <!-- Hero Content -->
-      <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="relative isolate px-6 pt-14 lg:px-8 min-h-screen flex items-center justify-center">
     <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#f57227] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
     </div>
     <!-- Background image (tinted). Replace src with your own image or video as needed -->
     <div class="absolute inset-0 -z-20 overflow-hidden">
       <img src="./site-images/hero-image.png" alt="Hero background" class="w-full h-full object-cover" />
-      <div class="absolute inset-0" style="background: rgba(3,7,18,0.45);"></div>
+      <div class="absolute inset-0" style="background: rgba(3,7,18,0.65);"></div>
     </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="text-left relative z-10">
-        <h1 class="text-5xl font-semibold uppercase tracking-tight text-balance text-white sm:text-9xl">We Bring Your Ideas To Life</h1>
-      </div>
-    </div>
+        <div class="mx-auto max-w-5xl">
+          <div class="relative z-20 w-full px-6 sm:px-12 lg:px-20 text-center">
+            <p class="grid max-w-full gap-4">
+              <span class="block">
+                <span class="block hero-title font-extrabold uppercase text-white leading-[0.9] tracking-tight text-center" style="font-size:clamp(3.5rem, 9vw, 7.5rem);">BRINGING YOUR</span>
+              </span>
+              <span class="block">
+                <span class="block hero-title font-extrabold uppercase text-white leading-[0.9] tracking-tight text-center" style="font-size:clamp(3.5rem, 9vw, 7.5rem);">IDEAS TO LIFE</span>
+              </span>
+            </p>
+            <!-- Hero CTAs removed per request -->
+          </div>
+        </div>
     <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#f57227] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
     </div>
   </div>
 </div> 
@@ -135,17 +150,17 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center mb-16">
-      <h2 class="text-base/7 font-semibold text-indigo-600">Our Services</h2>
+      <h2 class="text-base/7 font-semibold text-[#f57227]">Our Services</h2>
       <p class="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">What we offer</p>
       <p class="mt-6 text-lg text-gray-600">Comprehensive digital solutions tailored to accelerate your business growth.</p>
     </div>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
       <!-- Service 1: Landing Pages -->
       <div class="relative group">
-        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        <div class="absolute inset-0 bg-[#f57227] rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
         <div class="relative bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl transition">
-          <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-[#fff3e6]">
+            <svg class="w-6 h-6 text-[#f57227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </div>
@@ -156,10 +171,10 @@
 
       <!-- Service 2: Booking Pages -->
       <div class="relative group">
-        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        <div class="absolute inset-0 bg-[#f57227] rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
         <div class="relative bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl transition">
-          <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center justify-center w-12 h-12 bg-[#fff3e6] rounded-lg mb-4">
+            <svg class="w-6 h-6 text-[#f57227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
@@ -170,10 +185,10 @@
 
       <!-- Service 3: Portfolio Pages -->
       <div class="relative group">
-        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        <div class="absolute inset-0 bg-[#f57227] rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
         <div class="relative bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl transition">
-          <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center justify-center w-12 h-12 bg-[#fff3e6] rounded-lg mb-4">
+            <svg class="w-6 h-6 text-[#f57227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
             </svg>
           </div>
@@ -184,10 +199,10 @@
 
       <!-- Service 4: E-Commerce -->
       <div class="relative group">
-        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        <div class="absolute inset-0 bg-[#f57227] rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
         <div class="relative bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl transition">
-          <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center justify-center w-12 h-12 bg-[#fff3e6] rounded-lg mb-4">
+            <svg class="w-6 h-6 text-[#f57227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3v-6" />
             </svg>
           </div>
@@ -198,10 +213,10 @@
 
       <!-- Service 5: Consulting -->
       <div class="relative group">
-        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+        <div class="absolute inset-0 bg-[#f57227] rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
         <div class="relative bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl transition">
-          <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center justify-center w-12 h-12 bg-[#fff3e6] rounded-lg mb-4">
+            <svg class="w-6 h-6 text-[#f57227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5a4 4 0 100-8 4 4 0 000 8z" />
             </svg>
           </div>
@@ -216,7 +231,7 @@
 <!---portfolio section-->
 <div id="portfolio" class="bg-gray-50 py-24 sm:py-32">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-center text-base/7 font-semibold text-indigo-600">Latest Projects</h2>
+    <h2 class="text-center text-base/7 font-semibold text-[#f57227]">Latest Projects</h2>
     <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl">Some examples of our most recent work</p>
     <div class="mt-16 grid gap-6 sm:mt-20 lg:grid-cols-2">
       <!-- Image 1 -->
@@ -243,7 +258,7 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-base/7 font-semibold text-indigo-600">Tailored Solutions</h2>
+      <h2 class="text-base/7 font-semibold text-[#f57227]">Tailored Solutions</h2>
       <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">How we help your business grow</p>
       <p class="mt-6 text-lg/8 text-gray-700">At HZT, we recognise not all businesses are the same. Our approach aims to collaborate with you to create the best ways to improve sales, processes and client satisfaction</p>
     </div>
@@ -251,7 +266,7 @@
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
         <div class="relative pl-16">
           <dt class="text-base/7 font-semibold text-gray-900">
-            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#f57227]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-white">
                 <path d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -262,7 +277,7 @@
         </div>
         <div class="relative pl-16">
           <dt class="text-base/7 font-semibold text-gray-900">
-            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#f57227]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-white">
                 <path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -273,7 +288,7 @@
         </div>
         <div class="relative pl-16">
           <dt class="text-base/7 font-semibold text-gray-900">
-            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#f57227]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-white">
                 <path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -284,7 +299,7 @@
         </div>
         <div class="relative pl-16">
           <dt class="text-base/7 font-semibold text-gray-900">
-            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+            <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#f57227]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-white">
                 <path d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -307,8 +322,8 @@
   <div class="mx-auto max-w-2xl text-center">
     <h2 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Ready to transform your vision?</h2>
     <p class="mx-auto mt-6 max-w-xl text-lg/8 text-gray-300">Let's partner together to bring your ideas to life. Get in touch with our team today and discover how HZT can help your business thrive.</p>
-    <div class="mt-10 flex items-center justify-center gap-x-6">
-      <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+      <button type="button" data-modal-open="contactModal" class="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 bg-[#f57227] hover:bg-[#e05910] focus-visible:outline-[#f57227]">Get started</button>
     </div>
   </div>
   <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -321,13 +336,41 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col-reverse items-center justify-between gap-4 py-6 sm:flex-row">
           <div class="text-sm text-gray-600">© 2025 HZT</div>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-4">
             <span class="text-sm text-gray-600">Powered by</span>
             <img src="./site-images/HZT_site_logo.png" alt="HZT" class="h-6 w-auto" />
+            <a href="https://www.instagram.com/hztsolutions/" target="_blank" rel="noopener noreferrer" class="ml-2 text-[#f57227] hover:text-[#e05910]" aria-label="HZT on Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.25h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zM17.75 6.5a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 z-50 items-center justify-center px-4 py-6">
+      <!-- Backdrop -->
+      <div data-modal-backdrop class="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true"></div>
+      <!-- Dialog -->
+      <div role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" class="relative max-w-lg w-full bg-white rounded-xl shadow-xl p-6 z-10">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 id="contactModalTitle" class="text-xl font-semibold text-gray-900">Get in touch</h3>
+            <p class="mt-2 text-sm text-gray-600">Choose how you'd like to contact us — email or Instagram DM.</p>
+          </div>
+          <button type="button" data-modal-close class="text-gray-400 hover:text-gray-600 ml-4">
+            <span class="sr-only">Close</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="mailto:info@hztsolutions.com" class="w-full text-center inline-flex items-center justify-center gap-2 rounded-md bg-[#f57227] hover:bg-[#e05910] text-white px-4 py-2 font-semibold">Email Us</a>
+          <a href="https://ig.me/m/hztsolutions" target="_blank" rel="noopener noreferrer" class="w-full text-center inline-flex items-center justify-center gap-2 rounded-md border border-[#f57227] text-[#f57227] hover:bg-[#f57227] hover:text-white px-4 py-2 font-semibold">Instagram DM</a>
+        </div>
+      </div>
+    </div>
 
     <script>
       // Mobile menu toggle
@@ -336,6 +379,36 @@
 
       mobileMenuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Modal behaviour
+      const modal = document.getElementById('contactModal');
+      const modalOpeners = document.querySelectorAll('[data-modal-open]');
+      const modalClosers = document.querySelectorAll('[data-modal-close]');
+      const modalBackdrop = document.querySelector('[data-modal-backdrop]');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.setAttribute('aria-hidden', 'false');
+        // focus the first interactive element in the modal
+        const first = modal.querySelector('a, button, [tabindex]');
+        if (first) first.focus();
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      modalOpeners.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }));
+      modalClosers.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); closeModal(); }));
+      if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
       });
     </script>
   </body>

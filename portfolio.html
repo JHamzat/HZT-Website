@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — HZT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hero-title {
+        font-family: "Oswald", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        letter-spacing: -0.03em;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navigation (simple, matches site style) -->
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Menu Options (Left) -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-[#f57227] font-medium transition"
+              >Home</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-700 hover:text-[#f57227] font-medium transition"
+              >Portfolio</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              class="text-gray-700 hover:text-[#f57227] focus:outline-none"
+              id="mobile-menu-btn"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Logo (Centered) -->
+          <div class="absolute left-1/2 transform -translate-x-1/2">
+            <a href="#" class="block">
+              <img
+                src="./site-images/HZT_site_logo.png"
+                alt="HZT logo"
+                class="h-10 w-auto"
+              />
+            </a>
+          </div>
+
+          <!-- CTA Button (Right) -->
+          <div class="hidden md:flex">
+            <button
+              type="button"
+              data-modal-open="contactModal"
+              class="bg-[#f57227] text-white px-6 py-2 rounded-lg hover:bg-[#e05910] font-medium transition"
+            >
+              Work With Us
+            </button>
+          </div>
+
+          <!-- Mobile CTA Button -->
+          <div class="md:hidden flex items-center ml-auto">
+            <button
+              type="button"
+              data-modal-open="contactModal"
+              class="bg-[#f57227] text-white px-4 py-2 rounded-lg hover:bg-[#e05910] font-medium transition text-sm"
+            >
+              Work With Us
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
+            >About</a
+          >
+          <a
+            href="portfolio.html"
+            class="block text-gray-700 hover:text-[#f57227] py-2 font-medium"
+            >Portfolio</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header
+      class="relative isolate bg-[url('./site-images/hero-image.png')] bg-cover bg-center"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div
+        class="relative max-w-5xl mx-auto px-6 py-28 sm:py-36 lg:py-44 text-center"
+      >
+        <h1
+          class="hero-title text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight"
+        >
+          Our Work
+        </h1>
+        <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
+          Case studies and examples of projects we've shipped for our clients —
+          product design, web platforms and campaigns that drove results.
+        </p>
+      </div>
+    </header>
+
+    <!-- Projects grid -->
+    <main class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <section class="mb-12">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-semibold text-[#f57227]">
+            Selected Projects
+          </h2>
+          <a
+            href="index.html#portfolio"
+            class="text-sm font-medium text-gray-600 hover:text-[#f57227]"
+            >Back to home</a
+          >
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Project 1 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1400&q=80"
+              alt="Project A"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">E-Commerce Redesign — ACME</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                A performance-first redesign that improved conversion by 34% and
+                reduced cart abandonment through clearer product pages and
+                checkout flows.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=1400&q=80"
+              alt="Project B"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">
+                Booking Platform — Bright Events
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Built a custom booking and payments platform for events with
+                instant availability and calendar sync.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2023</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80"
+              alt="Project C"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">
+                Lead Gen Campaign — Bright Foods
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">
+                A small campaign that delivered a 3x ROI via targeted landing
+                pages and automated follow-ups.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2023</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
+              alt="Project D"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Product Launch — ComputeCo</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                From discovery to launch — UI, marketing site and onboarding
+                flow for a developer tool.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2022</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80"
+              alt="Project E"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">
+                Brand Refresh — Local Studio
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Logo, guidelines and a marketing site that brought the brand
+                into a clearer position.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2022</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article
+            class="group relative bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80"
+              alt="Project F"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">
+                Analytics Dashboard — Retail Insights
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Custom dashboards and alerts that helped the client reduce
+                stockouts by 17%.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#f57227] hover:text-[#e05910]"
+                  >Read case study</a
+                >
+                <span class="text-sm text-gray-500">2021</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="mt-12 text-center">
+          <h3 class="text-lg font-semibold">Want to see more?</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            If you'd like a full PDF of case studies or references, get in touch
+            and we'll share more project details.
+          </p>
+          <div class="mt-6">
+            <a
+              href="mailto:hello@hztsolutions.com"
+              class="inline-block rounded-md bg-[#f57227] hover:bg-[#e05910] text-white px-4 py-2 font-semibold"
+              >Contact us</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same look as main site) -->
+    <footer class="border-t bg-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="flex flex-col-reverse items-center justify-between gap-4 py-6 sm:flex-row"
+        >
+          <div class="text-sm text-gray-600">© 2025 HZT</div>
+          <div class="flex items-center gap-4">
+            <span class="text-sm text-gray-600">Powered by</span>
+            <img
+              src="./site-images/HZT_site_logo.png"
+              alt="HZT"
+              class="h-6 w-auto"
+            />
+            <a
+              href="https://www.instagram.com/hztsolutions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ml-2 text-[#f57227] hover:text-[#e05910]"
+              aria-label="HZT on Instagram"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.25h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zM17.75 6.5a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle for portfolio page
+      const mobileMenuBtnPortfolio = document.getElementById(
+        "mobile-menu-btn-portfolio"
+      );
+      const mobileMenuPortfolio = document.getElementById(
+        "mobile-menu-portfolio"
+      );
+      if (mobileMenuBtnPortfolio) {
+        mobileMenuBtnPortfolio.addEventListener("click", () => {
+          mobileMenuPortfolio.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
